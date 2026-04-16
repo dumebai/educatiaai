@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politica de Confidențialitate — Educatia.AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:       #faf7f2;
+      --warm-white:  #fffef9;
+      --ink:         #1a1814;
+      --ink-soft:    #3d3a34;
+      --ink-muted:   #7a756c;
+      --teal:        #1d6e6e;
+      --teal-light:  #2a9090;
+      --teal-pale:   #e6f4f4;
+      --amber:       #e8a020;
+      --amber-pale:  #fdf3e0;
+      --border:      #e8e2d8;
+      --shadow:      rgba(26,24,20,.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .logo-mark {
+      width: 34px; height: 34px;
+      background: var(--teal);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      letter-spacing: -.5px;
+    }
+    .logo-text {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -.3px;
+    }
+    .logo-text span { color: var(--teal); }
+    .header-badge {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .3rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 99px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--teal);
+      padding: 5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 50%, rgba(255,255,255,.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(0,0,0,.15) 0%, transparent 70%);
+    }
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: rgba(255,255,255,.15);
+      color: rgba(255,255,255,.9);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35rem .85rem;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-tag svg { opacity: .8; }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      color: rgba(255,255,255,.78);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      color: rgba(255,255,255,.7);
+      font-size: .82rem;
+      font-weight: 500;
+    }
+    .hero-meta-item svg { opacity: .7; }
+
+    /* ── LAYOUT ── */
+    .page-body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+    }
+    .sidebar-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+    .toc {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .15rem;
+    }
+    .toc a {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .55rem .75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: .83rem;
+      font-weight: 500;
+      transition: background .15s, color .15s;
+    }
+    .toc a:hover, .toc a.active {
+      background: var(--teal-pale);
+      color: var(--teal);
+    }
+    .toc-num {
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--teal);
+      background: var(--teal-pale);
+      width: 20px; height: 20px;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .toc a:hover .toc-num, .toc a.active .toc-num {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .sidebar-notice {
+      margin-top: 2rem;
+      background: var(--amber-pale);
+      border: 1px solid rgba(232,160,32,.3);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .sidebar-notice p {
+      font-size: .78rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .sidebar-notice strong { color: #a06010; }
+
+    /* ── CONTENT ── */
+    .content section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp .5s ease both;
+    }
+    .content section:last-child { border-bottom: none; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      background: var(--teal-pale);
+    }
+    .section-icon.amber { background: var(--amber-pale); }
+    .section-icon.red   { background: #fdeaea; }
+    .section-icon.green { background: #e8f5e9; }
+    .section-icon.blue  { background: #e3f0fb; }
+    .section-icon.purple{ background: #f3eeff; }
+
+    .section-title-wrap {}
+    .section-num {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: .2rem;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .content p {
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+      font-size: .95rem;
+    }
+    .content p:last-child { margin-bottom: 0; }
+
+    .content h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 1.5rem 0 .6rem;
+    }
+
+    /* Lists */
+    .content ul, .content ol {
+      margin: .75rem 0 1rem 0;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .content ul li, .content ol li {
+      color: var(--ink-soft);
+      font-size: .93rem;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: .65em;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: .7;
+    }
+    .content ol {
+      counter-reset: ol-counter;
+    }
+    .content ol li {
+      counter-increment: ol-counter;
+    }
+    .content ol li::before {
+      content: counter(ol-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: .8rem;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem;
+    }
+    .card-icon { font-size: 1.4rem; margin-bottom: .5rem; }
+    .card h4 {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .35rem;
+    }
+    .card p {
+      font-size: .78rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Callout */
+    .callout {
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      margin: 1.25rem 0;
+      display: flex;
+      gap: .85rem;
+      align-items: flex-start;
+    }
+    .callout-teal  { background: var(--teal-pale); border-left: 3px solid var(--teal); }
+    .callout-amber { background: var(--amber-pale); border-left: 3px solid var(--amber); }
+    .callout-red   { background: #fdeaea; border-left: 3px solid #e05050; }
+    .callout-green { background: #e8f5e9; border-left: 3px solid #3d9a54; }
+    .callout-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.6; }
+    .callout p { font-size: .87rem; color: var(--ink-soft); margin-bottom: 0; }
+    .callout strong { color: var(--ink); }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; margin: 1.25rem 0; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; }
+    thead { background: var(--teal); }
+    thead th {
+      padding: .75rem 1rem;
+      text-align: left;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.9);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:nth-child(even) { background: var(--cream); }
+    tbody td {
+      padding: .7rem 1rem;
+      font-size: .87rem;
+      color: var(--ink-soft);
+      vertical-align: top;
+    }
+    tbody td:first-child { font-weight: 600; color: var(--ink); }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .right-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .right-card:hover {
+      border-color: var(--teal-light);
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+    .right-card .badge {
+      display: inline-block;
+      background: var(--teal-pale);
+      color: var(--teal);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .25rem .6rem;
+      border-radius: 6px;
+      margin-bottom: .7rem;
+    }
+    .right-card h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .35rem;
+    }
+    .right-card p {
+      font-size: .8rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--teal);
+      border-radius: 16px;
+      padding: 2rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .contact-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      margin-bottom: .3rem;
+      color: #fff;
+    }
+    .contact-card p { color: rgba(255,255,255,.75); font-size: .85rem; margin: 0; }
+    .contact-links { display: flex; flex-direction: column; gap: .5rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: .6rem;
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 500;
+    }
+    .contact-link:hover { color: #fff; text-decoration: underline; }
+    .contact-icon {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: .8rem;
+    }
+    footer a { color: rgba(255,255,255,.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 800px) {
+      .page-body {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.25rem 4rem;
+      }
+      .sidebar { position: static; }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .contact-card { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-mark">E</div>
+      <span class="logo-text">Educatia<span>.AI</span></span>
+    </a>
+    <span class="header-badge">Politica de Confidențialitate</span>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1a5 5 0 100 10A5 5 0 006 1zm.5 7.5h-1v-3h1v3zm0-4h-1v-1h1v1z"/></svg>
+      Document legal
+    </div>
+    <h1>Politica de Confidențialitate</h1>
+    <p>Protecția datelor tale și ale copilului tău este prioritatea noastră absolută. Citește cum colectăm, folosim și protejăm informațiile pe platforma Educatia.AI.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Ultima actualizare: 16 aprilie 2025
+      </div>
+      <div class="hero-meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conform GDPR (UE 2016/679)
+      </div>
+      <div class="hero-meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        ~8 minute de lectură
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BODY ══════════ -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <p class="sidebar-label">Cuprins</p>
+    <ul class="toc">
+      <li><a href="#s1"><span class="toc-num">1</span> Cine suntem</a></li>
+      <li><a href="#s2"><span class="toc-num">2</span> Date colectate</a></li>
+      <li><a href="#s3"><span class="toc-num">3</span> Cum folosim datele</a></li>
+      <li><a href="#s4"><span class="toc-num">4</span> Protecția copiilor</a></li>
+      <li><a href="#s5"><span class="toc-num">5</span> Cookie-uri</a></li>
+      <li><a href="#s6"><span class="toc-num">6</span> Partajare și terți</a></li>
+      <li><a href="#s7"><span class="toc-num">7</span> Securitate</a></li>
+      <li><a href="#s8"><span class="toc-num">8</span> Drepturile tale</a></li>
+      <li><a href="#s9"><span class="toc-num">9</span> Modificări</a></li>
+      <li><a href="#s10"><span class="toc-num">10</span> Contact</a></li>
+    </ul>
+
+    <div class="sidebar-notice">
+      <p><strong>Ești părinte?</strong> Secțiunea <a href="#s4" style="color:var(--teal);font-weight:600">4 — Protecția copiilor</a> îți explică drepturile și consimțământul parental.</p>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- S1 -->
+    <section id="s1">
+      <div class="section-header">
+        <div class="section-icon">🏫</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 01</p>
+          <h2 class="section-title">Cine suntem</h2>
+        </div>
+      </div>
+      <p>Educatia.AI este o platformă educațională digitală adaptivă, operată de <strong>Educatia AI SRL</strong>, societate înregistrată în România, cu sediul în București. Platforma oferă experiențe de învățare personalizate pentru elevi cu vârste între 2 și 18 ani, precum și pentru adulți.</p>
+      <p>În sensul Regulamentului General privind Protecția Datelor (GDPR — Regulamentul UE 2016/679), Educatia AI SRL acționează în calitate de <strong>operator de date</strong> pentru toate informațiile colectate prin intermediul platformei noastre.</p>
+      <div class="callout callout-teal">
+        <span class="callout-icon">💡</span>
+        <p>Această politică se aplică tuturor utilizatorilor platformei Educatia.AI, inclusiv site-ului web, aplicației mobile și oricărui alt serviciu digital operat de noi.</p>
+      </div>
+    </section>
+
+    <!-- S2 -->
+    <section id="s2">
+      <div class="section-header">
+        <div class="section-icon blue">📋</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 02</p>
+          <h2 class="section-title">Datele pe care le colectăm</h2>
+        </div>
+      </div>
+      <p>Colectăm numai datele strict necesare pentru a oferi o experiență educațională de calitate. Iată o prezentare transparentă a categoriilor de date pe care le prelucrăm:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Categorie</th>
+              <th>Exemple</th>
+              <th>Baza legală</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date de cont</td>
+              <td>Nume, adresă e-mail, parolă (criptată), vârstă</td>
+              <td>Executarea contractului</td>
+            </tr>
+            <tr>
+              <td>Date de progres</td>
+              <td>Lecții parcurse, scoruri, insigne, streak-uri, timp petrecut</td>
+              <td>Interes legitim / contract</td>
+            </tr>
+            <tr>
+              <td>Date de utilizare</td>
+              <td>Pagini accesate, erori întâlnite, tipuri de dispozitiv</td>
+              <td>Interes legitim</td>
+            </tr>
+            <tr>
+              <td>Comunicări</td>
+              <td>Mesaje trimise echipei de suport</td>
+              <td>Interes legitim</td>
+            </tr>
+            <tr>
+              <td>Date de plată</td>
+              <td>Procesate exclusiv prin furnizori certificați PCI-DSS; nu stocăm carduri</td>
+              <td>Executarea contractului</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ce nu colectăm niciodată</h3>
+      <ul>
+        <li>Date de geolocalizare precisă</li>
+        <li>Date biometrice (față, voce fără consimțământ explicit)</li>
+        <li>Date sensibile (sănătate, etnie, religie) fără consimțământ explicit</li>
+        <li>Contacte sau liste de prieteni din rețelele sociale</li>
+      </ul>
+    </section>
+
+    <!-- S3 -->
+    <section id="s3">
+      <div class="section-header">
+        <div class="section-icon green">⚙️</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 03</p>
+          <h2 class="section-title">Cum folosim datele tale</h2>
+        </div>
+      </div>
+      <p>Datele colectate sunt utilizate exclusiv în scopuri educaționale și operaționale. Nu vindem niciodată datele tale.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h4>Personalizarea învățării</h4>
+          <p>Adaptăm dificultatea, ritmul și conținutul la performanțele și preferințele fiecărui utilizator.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h4>Rapoarte de progres</h4>
+          <p>Generăm rapoarte pentru elevi, părinți și educatori despre evoluția în timp.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔔</div>
+          <h4>Notificări utile</h4>
+          <p>Reminder-uri pentru lecții, felicitări la atingerea obiectivelor (cu acordul tău).</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h4>Îmbunătățirea platformei</h4>
+          <p>Analiza anonimizată a comportamentului de utilizare ne ajută să îmbunătățim produsul.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h4>Securitate și prevenire fraude</h4>
+          <p>Detectăm și prevenim accesul neautorizat și utilizarea abuzivă a platformei.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📜</div>
+          <h4>Obligații legale</h4>
+          <p>Respectăm cerințele legale aplicabile, inclusiv legislația fiscală și GDPR.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- S4 -->
+    <section id="s4">
+      <div class="section-header">
+        <div class="section-icon amber">🧒</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 04</p>
+          <h2 class="section-title">Protecția specială a copiilor</h2>
+        </div>
+      </div>
+
+      <div class="callout callout-amber">
+        <span class="callout-icon">⚠️</span>
+        <p><strong>Aceasta este secțiunea cea mai importantă dacă ești părinte sau tutore legal.</strong> Platforma noastră este concepută prioritar pentru minori, iar protecția datelor lor este tratată cu cele mai înalte standarde.</p>
+      </div>
+
+      <h3>Consimțământul parental</h3>
+      <p>Conform art. 8 din GDPR și legislației române aplicabile, pentru utilizatorii cu vârsta sub <strong>16 ani</strong>, prelucrarea datelor cu caracter personal este legală numai dacă există consimțământul titularului răspunderii părintești. Prin urmare:</p>
+      <ul>
+        <li>Înregistrarea unui copil sub 16 ani necesită crearea unui <strong>cont parental verificat</strong></li>
+        <li>Părintele/tutorele primește o confirmare prin e-mail și trebuie să aprobe activ contul</li>
+        <li>Fără această aprobare, contul rămâne inactiv</li>
+      </ul>
+
+      <h3>Ce restricții aplicăm pentru conturile de minor</h3>
+      <ul>
+        <li>Nu solicităm și nu afișăm <strong>prenumele complet sau datele de contact</strong> ale copilului în interfața publică</li>
+        <li>Nu permitem <strong>comunicarea directă</strong> cu alți utilizatori fără supraveghere parentală activată</li>
+        <li>Nu afișăm <strong>reclame comportamentale</strong> utilizatorilor sub 18 ani</li>
+        <li>Nu partajăm date despre minori cu terțe părți în scopuri de marketing</li>
+        <li>Sesiunile sunt monitorizate pentru <strong>conținut inadecvat</strong>; orice tentativă este blocată automat</li>
+      </ul>
+
+      <h3>Controlul parental</h3>
+      <p>Părinții și tutorii au acces la un <strong>panou dedicat</strong> din care pot:</p>
+      <ol>
+        <li>Vizualiza tot istoricul de activitate al copilului</li>
+        <li>Descărca sau șterge datele copilului</li>
+        <li>Restricționa funcționalități (chat, provocări cu alți utilizatori)</li>
+        <li>Seta limite de timp zilnic pe platformă</li>
+        <li>Retrage consimțământul în orice moment</li>
+      </ol>
+
+      <div class="callout callout-green">
+        <span class="callout-icon">✅</span>
+        <p><strong>Principiu „Privacy by Default":</strong> Orice cont nou de minor pornește cu setările de confidențialitate la maximum — niciun date nu este public, nicio funcție socială nu este activă fără aprobare parentală explicită.</p>
+      </div>
+    </section>
+
+    <!-- S5 -->
+    <section id="s5">
+      <div class="section-header">
+        <div class="section-icon purple">🍪</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 05</p>
+          <h2 class="section-title">Cookie-uri și tehnologii similare</h2>
+        </div>
+      </div>
+      <p>Utilizăm cookie-uri pentru a asigura funcționarea corectă a platformei și pentru a personaliza experiența de învățare.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tip cookie</th><th>Scop</th><th>Durată</th><th>Obligatoriu</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Esențiale</td>
+              <td>Autentificare, sesiune, securitate CSRF</td>
+              <td>Sesiune / 30 zile</td>
+              <td>Da</td>
+            </tr>
+            <tr>
+              <td>Funcționale</td>
+              <td>Preferințe de limbă, temă vizuală, setări UI</td>
+              <td>1 an</td>
+              <td>Nu</td>
+            </tr>
+            <tr>
+              <td>Analitice</td>
+              <td>Statistici anonimizate de utilizare (fără date personale)</td>
+              <td>90 zile</td>
+              <td>Nu</td>
+            </tr>
+            <tr>
+              <td>Marketing</td>
+              <td>Nu folosim cookie-uri de marketing pe conturile de minor</td>
+              <td>—</td>
+              <td>Nu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Poți gestiona sau retrage consimțământul pentru cookie-uri non-esențiale oricând din <strong>Setări → Confidențialitate</strong> sau prin banner-ul de cookie-uri afișat la prima vizită.</p>
+    </section>
+
+    <!-- S6 -->
+    <section id="s6">
+      <div class="section-header">
+        <div class="section-icon blue">🔗</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 06</p>
+          <h2 class="section-title">Partajare cu terțe părți</h2>
+        </div>
+      </div>
+      <p><strong>Nu vindem niciodată datele tale.</strong> Partajăm date cu terți numai în situațiile strict necesare:</p>
+      <ul>
+        <li><strong>Furnizori de servicii cloud</strong> (infrastructură server, stocare) — legați prin contracte de prelucrare date (DPA) conform GDPR</li>
+        <li><strong>Procesatori de plăți</strong> (ex. Stripe, PayU) — certificați PCI-DSS; nu primesc date de progres educațional</li>
+        <li><strong>Servicii analitice anonimizate</strong> — date agregate, fără posibilitate de identificare</li>
+        <li><strong>Autorități publice</strong> — exclusiv când suntem obligați legal (ex. cerere judecătorească)</li>
+      </ul>
+      <div class="callout callout-red">
+        <span class="callout-icon">🚫</span>
+        <p><strong>Niciodată:</strong> Nu partajăm date cu agenții de publicitate, brokeri de date, platforme de social media sau alți terți comerciali fără consimțământul explicit al utilizatorului adult sau al părintelui.</p>
+      </div>
+
+      <h3>Transferuri internaționale</h3>
+      <p>Dacă datele sunt procesate în afara Spațiului Economic European (SEE), ne asigurăm că există garanții adecvate: Clauze Contractuale Standard (SCC) aprobate de Comisia Europeană sau că țara destinatară are un nivel adecvat de protecție conform deciziei Comisiei.</p>
+    </section>
+
+    <!-- S7 -->
+    <section id="s7">
+      <div class="section-header">
+        <div class="section-icon red">🛡️</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 07</p>
+          <h2 class="section-title">Securitatea datelor</h2>
+        </div>
+      </div>
+      <p>Implementăm măsuri tehnice și organizatorice de securitate conform standardelor industriale pentru a proteja datele împotriva accesului neautorizat, pierderii sau distrugerii:</p>
+      <ul>
+        <li><strong>Criptare în tranzit:</strong> TLS 1.3 pentru toate conexiunile</li>
+        <li><strong>Criptare la rest:</strong> AES-256 pentru bazele de date cu date sensibile</li>
+        <li><strong>Parole:</strong> Stocate exclusiv ca hash bcrypt (nu stocăm niciodată parole în clar)</li>
+        <li><strong>Autentificare în doi pași (2FA):</strong> Disponibilă și recomandată pentru toate conturile</li>
+        <li><strong>Audituri de securitate:</strong> Teste de penetrare periodice și scanare automată de vulnerabilități</li>
+        <li><strong>Control acces:</strong> Angajații au acces la date pe principiul „need to know"</li>
+        <li><strong>Backup-uri criptate:</strong> Zilnice, stocate în locații geografice separate</li>
+      </ul>
+      <h3>Notificarea încălcărilor</h3>
+      <p>În cazul unui incident de securitate care afectează datele tale, te vom notifica și vom informa Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) în conformitate cu obligațiile GDPR (în maxim 72 de ore de la identificarea incidentului).</p>
+    </section>
+
+    <!-- S8 -->
+    <section id="s8">
+      <div class="section-header">
+        <div class="section-icon green">⚖️</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 08</p>
+          <h2 class="section-title">Drepturile tale</h2>
+        </div>
+      </div>
+      <p>Conform GDPR, beneficiezi de următoarele drepturi pe care le poți exercita gratuit, oricând:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <span class="badge">Art. 15 GDPR</span>
+          <h4>Dreptul de acces</h4>
+          <p>Poți solicita oricând o copie a tuturor datelor personale pe care le deținem despre tine.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 16 GDPR</span>
+          <h4>Dreptul la rectificare</h4>
+          <p>Dacă datele tale sunt inexacte sau incomplete, le poți corecta direct din cont sau prin cerere.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 17 GDPR</span>
+          <h4>Dreptul la ștergere</h4>
+          <p>Poți solicita ștergerea contului și a tuturor datelor asociate. Procesăm cererea în maxim 30 de zile.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 18 GDPR</span>
+          <h4>Dreptul la restricționare</h4>
+          <p>Poți restricționa temporar prelucrarea datelor tale în anumite circumstanțe prevăzute de lege.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 20 GDPR</span>
+          <h4>Dreptul la portabilitate</h4>
+          <p>Poți exporta datele tale într-un format structurat (JSON/CSV) pentru a le transfera altui serviciu.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 21 GDPR</span>
+          <h4>Dreptul la opoziție</h4>
+          <p>Poți obiecta oricând la prelucrarea bazată pe interesul nostru legitim, inclusiv profilarea.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 22 GDPR</span>
+          <h4>Decizii automate</h4>
+          <p>Ai dreptul să nu fii supus unei decizii bazate exclusiv pe prelucrare automată, inclusiv profilare.</p>
+        </div>
+        <div class="right-card">
+          <span class="badge">Art. 77 GDPR</span>
+          <h4>Dreptul de plângere</h4>
+          <p>Poți depune plângere la ANSPDCP (anspdcp.eu) dacă consideri că drepturile tale au fost încălcate.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-teal">
+        <span class="callout-icon">📬</span>
+        <p>Pentru exercitarea oricărui drept, contactează-ne la <strong>privacy@educatia.ai</strong>. Răspundem în maxim <strong>30 de zile calendaristice</strong> de la primirea cererii.</p>
+      </div>
+    </section>
+
+    <!-- S9 -->
+    <section id="s9">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 09</p>
+          <h2 class="section-title">Modificări ale politicii</h2>
+        </div>
+      </div>
+      <p>Putem actualiza această politică periodic pentru a reflecta modificări ale practicilor noastre sau cerințe legale noi. La orice modificare semnificativă:</p>
+      <ul>
+        <li>Vei fi notificat prin <strong>e-mail</strong> cu cel puțin <strong>30 de zile înainte</strong> de intrarea în vigoare</li>
+        <li>Un banner de notificare va apărea în aplicație la prima autentificare după modificare</li>
+        <li>Versiunile anterioare ale politicii sunt arhivate și disponibile la cerere</li>
+        <li>Continuarea utilizării platformei după data intrării în vigoare constituie acceptul noii politici</li>
+      </ul>
+      <p>Data ultimei actualizări este afișată în antetul acestei pagini și în istoricul versiunilor disponibil <a href="#" style="color:var(--teal);font-weight:600">aici</a>.</p>
+    </section>
+
+    <!-- S10 -->
+    <section id="s10">
+      <div class="section-header">
+        <div class="section-icon blue">📩</div>
+        <div class="section-title-wrap">
+          <p class="section-num">Secțiunea 10</p>
+          <h2 class="section-title">Contact și DPO</h2>
+        </div>
+      </div>
+      <p>Avem un <strong>Responsabil cu Protecția Datelor (DPO)</strong> dedicat, disponibil pentru orice întrebare legată de confidențialitate:</p>
+
+      <div class="contact-card">
+        <div>
+          <h3>Educatia AI SRL — Echipa de confidențialitate</h3>
+          <p>Răspundem la toate solicitările în maxim 72 de ore lucrătoare.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:privacy@educatia.ai" class="contact-link">
+            <span class="contact-icon">✉️</span>
+            privacy@educatia.ai
+          </a>
+          <a href="mailto:dpo@educatia.ai" class="contact-link">
+            <span class="contact-icon">🛡️</span>
+            dpo@educatia.ai (DPO)
+          </a>
+          <a href="https://educatia.ai/contact" class="contact-link">
+            <span class="contact-icon">🌐</span>
+            educatia.ai/contact
+          </a>
+        </div>
+      </div>
+
+      <p style="margin-top:1.5rem">Dacă nu ești mulțumit de răspunsul nostru, ai dreptul să depui o plângere la autoritatea națională de supraveghere:</p>
+      <p><strong>ANSPDCP</strong> — Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal<br>
+      B-dul Magheru 28–30, Sector 1, București | <a href="https://www.dataprotection.ro" style="color:var(--teal)">dataprotection.ro</a></p>
+    </section>
+
+  </main>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <p>© 2025 Educatia AI SRL · <a href="#">Termeni și condiții</a> · <a href="#">Politica de Cookie-uri</a> · <a href="#">Centrul de ajutor</a></p>
+  <p style="margin-top:.5rem;font-size:.72rem;opacity:.6">Educatia.AI este conformă cu GDPR (UE 2016/679) și legislația română privind protecția datelor.</p>
+</footer>
+
+<script>
+  // Highlight active TOC link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('.toc a');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+
+  // Stagger section animations
+  sections.forEach((s, i) => {
+    s.style.animationDelay = `${i * 0.06}s`;
+  });
+</script>
+
+</body>
+</html>
