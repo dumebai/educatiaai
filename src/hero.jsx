@@ -166,7 +166,7 @@ function Hero() {
       {/* Top nav */}
 
       {/* Hero content — safe zone */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-10 pt-20 sm:pt-28 md:pt-32 pb-28">
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-10 pt-10 sm:pt-16 md:pt-20 pb-28">
         <div
           className="max-w-[900px] mx-auto text-center"
           style={{ transform: `translate3d(0, ${parY * 0.4}px, 0)` }}>
