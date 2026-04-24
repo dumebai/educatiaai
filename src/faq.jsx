@@ -40,7 +40,7 @@ function FinalCTA() {
         >
           Ne vedem pe{" "}
           <span className="italic" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80' }}>
-            25 iunie
+            25 mai
           </span>
           <span style={{ color: "#B44A3C" }}>.</span>
         </h2>
