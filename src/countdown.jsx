@@ -3,7 +3,7 @@ const { useState: _useStateCD, useEffect: _useEffectCD } = React;
 
 // Target: 25 mai 2026, 00:00 (Europe/Bucharest)
 // We use a fixed epoch relative to UTC+3 (Romanian summer time).
-const LAUNCH_ISO = "2026-05-25T00:00:00+03:00";
+const LAUNCH_ISO = "2026-05-25T08:00:00+03:00";
 const LAUNCH_TS = new Date(LAUNCH_ISO).getTime();
 
 function calcRemaining() {
