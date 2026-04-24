@@ -399,16 +399,18 @@ function WhatChanges() {
 }
 
 function ForWhom() {
-  const yes = [
-  "Vor să reducă vinovăția din timpul petrecut cu ecranul.",
-  "Caută un partener în educație, nu un înlocuitor.",
-  "Cred că jocul și învățarea nu se contrazic.",
-  "Sunt dispuși să se așeze 5 minute pe săptămână lângă copil."];
+const yes = [
+  "Vor să-și vadă copilul curios și implicat.",
+  "Cred că învățarea ar trebui să fie ceva natural, nu forțat.",
+  "Își doresc un copil care descoperă, nu doar memorează.",
+  "Simt că educația bună începe cu încredere și răbdare."
+];
 
-  const no = [
-  "Vor 100% divertisment pasiv, ca o televiziune colorată.",
-  "Se așteaptă la miracole în 3 zile.",
-  "Nu vor să fie implicați niciodată, nici măcar la început."];
+const no = [
+  "Caută doar o soluție rapidă ca să-l țină ocupat.",
+  "Nu sunt interesați de proces, doar de rezultat.",
+  "Nu vor să se implice deloc în experiența copilului."
+];
 
 
   return (
