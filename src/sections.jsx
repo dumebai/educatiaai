@@ -89,7 +89,7 @@ function Mechanism() {
             <div className="eyebrow mb-4">Cum funcționează</div>
             <h2 className="headline text-[36px] sm:text-[46px] md:text-[54px] text-ink max-w-[16ch]">
               Trei pași.
-              <span className="italic text-muted"> Nici unul complicat.</span>
+              <span className="italic text-muted"> Niciunul complicat.</span>
             </h2>
           </div>
           <p className="text-[17px] text-muted md:max-w-[340px]">Am construit-o în așa fel încât să o poată porni și bunica. Tu deschizi platforma. 
