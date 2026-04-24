@@ -166,7 +166,7 @@ function Hero() {
       {/* Top nav */}
       <header className="relative z-20 max-w-[1280px] mx-auto px-6 sm:px-10 pt-7 flex items-center justify-between">
         <a href="#" className="group" aria-label="Educatia.AI acasă">
-          <span className="font-serif text-[20px] sm:text-[22px] tracking-tight text-ink" style={{ letterSpacing: "-0.02em", fontFamily: "Fraunces", fontSize: "3px" }}>
+          <span className="font-serif text-[20px] sm:text-[42px] tracking-tight text-ink" style={{ letterSpacing: "-0.02em", fontFamily: "Fraunces", fontSize: "3px" }}>
             Educatia<span style={{ color: "#FF5B4A" }}>.</span>AI
           </span>
         </a>
