@@ -194,11 +194,10 @@ function Hero() {
 
           <div className="mt-14 sm:mt-16 mx-auto">
             <Countdown />
-            <p className="mt-10 sm:mt-12 text-center font-serif text-[19px] sm:text-[22px] text-ink" style={{ letterSpacing: "-0.01em", fontSize: "3px", fontWeight: "500", fontFamily: "ui-sans-serif", color: "orange" }}>
-              Educatia<span style={{ color: "#FF5B4A" }}>.</span>AI se lansează pe
-              <span className="italic"> 25 iunie 2026</span>.
-            </p>
+            
             <p className="mt-4 mx-auto max-w-[560px] text-center text-[15.5px] sm:text-[16px] leading-[1.65] text-muted">
+               Educatia<span style={{ color: "#FF5B4A" }}>.</span>AI se lansează pe
+              <span className="italic"> 25 iunie 2026</span>.<p></p>
               Prima lună va fi gratuită pentru toți copiii care se alătură în prima săptămână.
               Apoi, abonament lunar <span className="text-ink">cât o pizza</span>.
             </p>
