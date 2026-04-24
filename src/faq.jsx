@@ -110,9 +110,6 @@ function Footer() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-[13.5px] text-muted">
           <span>
             © 2026 <span className="text-ink font-serif">Educatia<span style={{color:"#FF5B4A"}}>.</span>AI</span>
-            <span className="mx-2 divider-dot inline-block align-middle"></span>
-            <a href="mailto:contact@educatia.ai" className="link-underline text-ink">contact@educatia.ai</a>
-          </span>
           <span className="font-mono text-[11px] uppercase tracking-wider">v. pre-launch</span>
         </div>
       </div>
