@@ -167,7 +167,7 @@ function WhyEmoji() {
             <div className="mt-10 relative hidden lg:block">
               <div className="soft-card rounded-[24px] p-8 relative overflow-hidden" style={{ background: "#FDFBF6" }}>
                 <div className="grid grid-cols-4 gap-3 text-[44px] leading-none">
-                  {['🦖', '➡️', '🥚', '🌿', '🎨', '✨', '🎼', '🎵', '🔢', '➕', '🔢', '🟰'].map((e, i) =>
+                  {['🦖', '📔', '🥚', '🌿', '🎨', '✨', '🎼', '🎵', '🔢', '➕', '🏺', '📚'].map((e, i) =>
                   <div key={i} className="aspect-square flex items-center justify-center rounded-xl" style={{ background: "#FBF8F3", border: "1px solid #EFE7D6" }}>
                       <span>{e}</span>
                     </div>
