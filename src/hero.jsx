@@ -197,7 +197,7 @@ function Hero() {
             
             <p className="mt-4 mx-auto max-w-[560px] text-center text-[15.5px] sm:text-[16px] leading-[1.65] text-muted">
                Educatia<span style={{ color: "#FF5B4A" }}>.</span>AI se lansează pe
-              <span className="italic"> 25 iunie 2026</span>.<p></p>
+              <span className="italic"> 25 mai 2026</span>.<p></p>
               Prima lună va fi gratuită pentru toți copiii care se alătură în prima săptămână.
               Apoi, abonament lunar, care va costa <span className="text-ink">cât o pizza</span>.
             </p>
