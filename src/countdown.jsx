@@ -80,7 +80,7 @@ function Countdown() {
   return (
     <div className="mx-auto max-w-[780px]">
       <div className="flex items-start justify-center gap-2 sm:gap-5 md:gap-7">
-        <CountdownUnit value={t.days} label="Zile" digits={3} />
+        <CountdownUnit value={t.days} label="Zile" digits={2} />
         <Separator />
         <CountdownUnit value={t.hours} label="Ore" />
         <Separator />
