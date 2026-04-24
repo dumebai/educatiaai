@@ -100,6 +100,7 @@ function Footer() {
           <span>
             © 2026 <span className="text-ink font-serif">Educatia<span style={{color:"#FF5B4A"}}>.</span>AI</span>
           <span className="font-mono text-[11px] uppercase tracking-wider">v. pre-launch</span>
+          </span>
         </div>
       </div>
     </footer>
