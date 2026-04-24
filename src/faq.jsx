@@ -47,7 +47,7 @@ function FinalCTA() {
 
         <p className="mt-9 mx-auto max-w-[560px] text-[18px] sm:text-[20px] leading-[1.65] text-muted" style={{textWrap:"pretty"}}>
           Până atunci, construim. Dacă vrei să fii la curent cu ce facem,
-          ne găsești pe Instagram și TikTok.
+          ne găsești pe Instagram.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -63,17 +63,6 @@ function FinalCTA() {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
             Instagram
-          </a>
-          <a
-            href="https://tiktok.com/@educatia.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white px-6 py-3.5 text-[15px] text-ink hover:bg-ink hover:text-white transition-colors"
-          >
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
-            </svg>
-            TikTok
           </a>
         </div>
 
