@@ -265,7 +265,7 @@ function AgeGroups() {
                     Curriculum:
                   </span>
                   <span className="text-[14px] text-ink/80">
-                    {i === 0 ? "Română · Matematică · Lumea din jur" : "STEM · Limbi · Logică · Creativitate"}
+                    {i === 0 ? "Română · Matematică · Lumea din jur" : "Inteligență emoțională si financiară · Logică · Creativitate"}
                   </span>
                 </div>
               </div>
