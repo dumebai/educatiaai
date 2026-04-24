@@ -164,24 +164,6 @@ function Hero() {
       
 
       {/* Top nav */}
-      <header className="relative z-20 max-w-[1280px] mx-auto px-6 sm:px-10 pt-7 flex items-center justify-between">
-        <a href="#" className="group" aria-label="Educatia.AI acasă">
-          <span className="font-serif text-[20px] sm:text-[42px] tracking-tight text-ink" style={{ letterSpacing: "-0.02em", fontFamily: "Fraunces", fontSize: "3px" }}>
-            Educatia<span style={{ color: "#FF5B4A" }}>.</span>AI
-          </span>
-        </a>
-        <nav className="hidden md:flex items-center gap-8 text-[14.5px] text-muted">
-          <a href="#cum-functioneaza" className="link-underline hover:text-ink">Cum funcționează</a>
-          <a href="#varste" className="link-underline hover:text-ink">Vârste</a>
-        </nav>
-        <a
-          href="#final-cta"
-          className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-line bg-white/70 backdrop-blur px-4 py-2 text-[14px] text-ink hover:bg-white transition">
-          
-          Ne vedem pe 25 iunie
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-        </a>
-      </header>
 
       {/* Hero content — safe zone */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-10 pt-20 sm:pt-28 md:pt-32 pb-28">
