@@ -70,8 +70,8 @@ function Mechanism() {
   {
     num: "02",
     emoji: "🎯",
-    title: "Ghidat după ritmul lui",
-    body: "După primele 3 lecții, platforma ajustează dificultatea și subiectele după ritmul copilului tău."
+    title: "Trepte clare, progres vizibil",
+    body: "Lectiile sunt structurate pe nivele. Cand termina unul, deschide urmatorul - asa stie si el ca a avansat."
   },
   {
     num: "03",
