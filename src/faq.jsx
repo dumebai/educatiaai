@@ -52,7 +52,7 @@ function FinalCTA() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
   
-    href="https://linkedin.com/company/educatiaai"
+    <a href="https://linkedin.com/company/educatiaai"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white px-6 py-3.5 text-[15px] text-ink hover:bg-ink hover:text-white transition-colors"
