@@ -1,0 +1,28 @@
+{
+  "name": "educatiaai",
+  "version": "1.0.0",
+  "description": "Platformă educațională cu AI pentru copii 6-12 ani",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dumebai/educatiaai.git"
+  },
+  "keywords": [
+    "education",
+    "ai",
+    "children",
+    "learning"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dumebai/educatiaai/issues"
+  },
+  "homepage": "https://github.com/dumebai/educatiaai#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
