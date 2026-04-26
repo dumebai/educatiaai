@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/dumebai/educatiaai/issues"
   },
-  "homepage": "https://github.com/dumebai/educatiaai#readme",
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1"
-  }
+  "homepage": "https://github.com/dumebai/educatiaai#readme"
 }
