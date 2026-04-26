@@ -47,12 +47,12 @@ function FinalCTA() {
 
         <p className="mt-9 mx-auto max-w-[560px] text-[18px] sm:text-[20px] leading-[1.65] text-muted" style={{textWrap:"pretty"}}>
           Până atunci, construim. Dacă vrei să fii la curent cu ce facem,
-          ne găsești pe Instagram.
+          ne găsești pe LinkedIn.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://instagram.com/educatia.ai"
+            href="https://linkedin.com/company/educatiaai"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white px-6 py-3.5 text-[15px] text-ink hover:bg-ink hover:text-white transition-colors"
@@ -62,7 +62,7 @@ function FinalCTA() {
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
-            Instagram
+            LinkedIn
           </a>
         </div>
 
